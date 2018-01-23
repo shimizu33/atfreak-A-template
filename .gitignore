@@ -3,4 +3,6 @@
 ::
 README.txt
 _rtl.css
-
+.sass-cache
+img
+style.css.map
