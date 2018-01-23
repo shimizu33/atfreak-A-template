@@ -1,5 +1,12 @@
 <?php get_header(); ?>
 <div id="top-slider">
+<ul>
+  <li><img src="<?php echo get_template_directory_uri(); ?>/img/test.jpg"></li>
+</ul>
+</div>
+<section id="notice-job" class="top-sec">
+<div class="inner">
+<h2>注目の求人</h2>
 <?php
 $count = 1;
 $the_query = new WP_Query(array(
@@ -12,7 +19,30 @@ $the_query = new WP_Query(array(
 ));
 ?>
 <?php if($the_query->have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
-  <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+<div class="article-wrap">
+<a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/test.jpg"></a>
+<dl>
+<dt>職種</dt>
+<dd><?php the_field('requirements_required1'); ?></dd>
+</dl>
+<dl>
+<dt>勤務地</dt>
+<dd><?php
+$text = mb_substr(get_field('requirements_required4'),0,12,'utf-8');
+$text_length = mb_strlen($text);
+if ($text_length === 12) {
+  $omission = '...';
+}
+echo $text . $omission;
+$omission = '';
+?>
+</dd>
+</dl>
+<dl>
+<dt>雇用形態</dt>
+<dd><?php the_field('requirements_required8'); ?></dd>
+</dl>
+</div>
 <?php endwhile; ?>
 <?php else: ?>
   <div class="no-article">
