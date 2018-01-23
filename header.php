@@ -24,8 +24,11 @@
 
 <nav>
 <ul>
-<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">採用トップ</a></li>
-<li><a href="http://www.tokangroup.co.jp/" target="_blank">HOME</a></li>
+<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">採用TOP</a></li>
+<li><a href="http://www.tokangroup.co.jp/" target="_blank">CORP</a></li>
+<li><a href="http://www.tokangroup.co.jp/" target="_blank">TOP</a></li>
+<li><a href="http://www.tokangroup.co.jp/" target="_blank">一覧</a></li>
+</ul>
 </nav>
 </header>
 <main>

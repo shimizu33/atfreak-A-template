@@ -1,5 +1,15 @@
 <?php get_header(); ?>
 <div id="top-slider">
+<?php
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 3,
+    'order'=>'DESC',
+    'orderby'=>'post_date',
+  );
+  $f_post = new WP_Query( $args );
+  $count = 1;
+?>
 <ul>
   <li><img src="<?php echo get_template_directory_uri(); ?>/img/test.jpg"></li>
 </ul>
@@ -7,47 +17,42 @@
 <section id="notice-job" class="top-sec">
 <div class="inner">
 <h2>注目の求人</h2>
-<?php
-$count = 1;
-$the_query = new WP_Query(array(
-  'post_status' => 'published',
-  'post_type' => 'post',
-  'orderby' => 'meta_value_num',
-  'meta_key' => '_liked',
-  'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
-  'posts_per_page' => 3,
-));
-?>
-<?php if($the_query->have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
-<div class="article-wrap">
-<a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/test.jpg"></a>
-<dl>
-<dt>職種</dt>
-<dd><?php the_field('requirements_required1'); ?></dd>
-</dl>
-<dl>
-<dt>勤務地</dt>
-<dd><?php
-$text = mb_substr(get_field('requirements_required4'),0,12,'utf-8');
-$text_length = mb_strlen($text);
-if ($text_length === 12) {
-  $omission = '...';
-}
-echo $text . $omission;
-$omission = '';
-?>
-</dd>
-</dl>
-<dl>
-<dt>雇用形態</dt>
-<dd><?php the_field('requirements_required8'); ?></dd>
-</dl>
-</div>
+<?php if($f_post->have_posts()): while($f_post->have_posts()): $f_post->the_post(); ?>
+  <?php if ( in_category( 'favorite' ) ): ?>
+    <div class="article-wrap">
+    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/test.jpg"></a>
+    <dl>
+      <dt>職種</dt>
+      <dd><?php the_title(); ?></dd>
+    </dl>
+    <dl>
+      <dt>勤務地</dt>
+      <dd><?php
+        $text = mb_substr(get_field('requirements_required4'),0,12,'utf-8');
+        $text_length = mb_strlen($text);
+        if ($text_length === 12) {
+          $omission = '...';
+        }
+        echo $text . $omission;
+        $omission = '';
+       ?>
+      </dd>
+    </dl>
+    <dl>
+      <dt>雇用形態</dt>
+      <dd><?php the_field('requirements_required8'); ?></dd>
+    </dl>
+    </div>
+    <?php $count = 2 ?>
+  <?php else: ?>
+    <?php if ($count === 1) : ?>
+      <div class="no-article">
+        <p>まだお気に入り記事が選択されていません。</p>
+      </div>
+      <?php $count = 2 ?>
+    <?php endif; ?>
+  <?php endif; ?>
 <?php endwhile; ?>
-<?php else: ?>
-  <div class="no-article">
-    <p>まだ記事が投稿されていません。</p>
-  </div>
 <?php endif; ?>
 </div>
 </section>
@@ -92,7 +97,7 @@ $omission = '';
 <?php endwhile; ?>
 <?php else: ?>
   <p><?php echo '記事はありません。'; ?></p>
-<? endif; ?>
+<?php endif; ?>
 </div>
 </section>
 <div class="job-list">
@@ -100,4 +105,4 @@ $omission = '';
 <p>募集中一覧</p>
 </a>
 </div>
-<?php get_footer();
+<?php get_footer(); ?>
