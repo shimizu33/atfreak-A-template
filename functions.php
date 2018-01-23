@@ -152,8 +152,6 @@ function permalink_handler( $atts ) {
 }
 add_shortcode('permalink', 'permalink_handler');
 
-
-
 /*
 *
 *

@@ -99,7 +99,7 @@ if ($photo_third1 && $photo_third2):
 <table class="requirements_data">
 <tbody>
 <?php
-for ($i=1; $i<8; $i++) {
+for ($i=1; $i<9; $i++) {
 	$fieldobject = get_field_object('requirements_required'.$i);
 	echo '<tr><th>' . $fieldobject['label'] . '</th><td>' . get_field('requirements_required'.$i) . '</td></tr>' . "\n";
 }
