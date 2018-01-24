@@ -23,7 +23,7 @@
     <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/test.jpg"></a>
     <dl>
       <dt>職種</dt>
-      <dd><?php the_title(); ?></dd>
+      <dd><?php the_field('requirements_required1'); ?></dd>
     </dl>
     <dl>
       <dt>勤務地</dt>
@@ -70,7 +70,7 @@
 <div class="article-wrap">
 <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/test.jpg"></a>
 <div class="right-box">
-<h3><?php the_title(); ?></h3>
+<h3><?php the_title(); ?></a></h3>
 <dl>
 <dt>職種</dt>
 <dd><?php the_field('requirements_required1'); ?></dd>

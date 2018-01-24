@@ -19,16 +19,23 @@
 
 <body>
 
+<?php if (is_home() || is_front_page()) : ?>
 <header id="site_header">
 <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" width="257" height="57" alt="テンプレート"></a></h1>
-
 <nav>
 <ul>
 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">採用TOP</a></li>
-<li><a href="http://www.tokangroup.co.jp/" target="_blank">CORP</a></li>
-<li><a href="http://www.tokangroup.co.jp/" target="_blank">TOP</a></li>
+<li><a href="http://www.tokangroup.co.jp/" target="_blank">CORPORATE</a></li>
 <li><a href="http://www.tokangroup.co.jp/" target="_blank">一覧</a></li>
 </ul>
 </nav>
 </header>
+<?php else: ?>
+<header id="site_header">
+<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" width="257" height="57" alt="テンプレート"></a></h1>
+<nav class="contact-form">
+  <p>お問い合わせ</p>
+</nav>
+</header>
+<?php endif; ?>
 <main>

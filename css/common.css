@@ -4,94 +4,54 @@ common style
 a {
   text-decoration: none;
 }
-
 a:hover {
   opacity: 0.8;
 }
-
 .no-article {
   margin: 20px auto;
   width: 100%;
   text-align: center;
 }
 
-
 /*--------------------------
 header format
 --------------------------*/
-@media print, screen {
-  #site_header {
-    background-color: #fff;
-    min-width: 1000px;
-    padding: 10px;
-    overflow: hidden;
-  }
-  #site_header h1 {
-    float: left;
-  }
-  #site_header h1 img {
-    width: auto;
-    height: 39px;
-    display: block;
-  }
-  #site_header nav {
-    margin-top: 5px;
-    float: right;
-  }
-  #site_header nav ul {
-    overflow: hidden;
-  }
-  #site_header nav ul li {
-    font-size: 14px;
-    line-height: 1.2;
-    text-align: center;
-    float: left;
-  }
-  #site_header nav ul li a {
-    border: #66cc66 solid 1px;
-    padding: 5px;
-    width: 168px;
-    text-decoration: none;
-    display: block;
-  }
-  #site_header nav ul li:nth-child(1) a:hover {
-    background-color: #a3e0a3;
-    color: #fff;
-  }
-  #site_header nav ul li:nth-child(2) a {
-    background-color: #66cc66;
-    color: #fff;
-  }
-  #site_header nav ul li:nth-child(2) a:hover {
-    background-color: #a3e0a3;
-  }
+header {
+  overflow: hidden;
+  height: 70px;
+  padding-top: 25px;
 }
-
-@media screen and (max-width: 640px) {
-  #site_header {
-    min-width: inherit;
-    padding: 0px;
-  }
-  #site_header h1 {
-    padding: 10px;
-    float: none;
-  }
-  #site_header h1 img {
-    margin: 0px auto;
-  }
-  #site_header nav {
-    margin-top: 0px;
-    float: none;
-  }
-  #site_header nav ul li {
-    width: 50%;
-    font-size: 12px;
-  }
-  #site_header nav ul li a {
-    width: auto;
-  }
+header h1 {
+  float: left;
 }
-
+header nav {
+  float: right;
+  overflow: hidden;
+}
+header nav ul {
+  overflow: hidden;
+}
+header nav ul li {
+  float: left;
+  font-size: 14px;
+}
+header nav ul li::after {
+  content: '｜';
+  margin: 0px 1em;
+}
+header nav ul li:last-child::after {
+  content: none;
+}
+header nav ul li a {
+  color: #000;
+}
+header nav.contact-form {
+  border: 1px solid #000;
+  margin: 19px 20px 0 0;
+  color: #000;
+  font-size: 14px;
+  padding: 3px 45px;
+}
 /*--------------------------
 close header format
 --------------------------*/

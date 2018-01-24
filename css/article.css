@@ -85,10 +85,6 @@ a:hover img {
   opacity: 0.75;
 }
 
-p {
-  margin-top: 1.8em;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -195,80 +191,7 @@ site common class
     width: inherit;
   }
 }
-/* ---------------------------------------------
-header format
---------------------------------------------- */
-@media print, screen {
-  #site_header {
-    background-color: #fff;
-    min-width: 1000px;
-    padding: 10px;
-    overflow: hidden;
-  }
-  #site_header h1 {
-    float: left;
-  }
-  #site_header h1 img {
-    width: auto;
-    height: 39px;
-    display: block;
-  }
-  #site_header nav {
-    margin-top: 5px;
-    float: right;
-  }
-  #site_header nav ul {
-    overflow: hidden;
-  }
-  #site_header nav ul li {
-    font-size: 14px;
-    line-height: 1.2;
-    text-align: center;
-    float: left;
-  }
-  #site_header nav ul li a {
-    border: #66cc66 solid 1px;
-    padding: 5px;
-    width: 168px;
-    text-decoration: none;
-    display: block;
-  }
-  #site_header nav ul li:nth-child(1) a:hover {
-    background-color: #a3e0a3;
-    color: #fff;
-  }
-  #site_header nav ul li:nth-child(2) a {
-    background-color: #66cc66;
-    color: #fff;
-  }
-  #site_header nav ul li:nth-child(2) a:hover {
-    background-color: #a3e0a3;
-  }
-}
-@media screen and (max-width: 640px) {
-  #site_header {
-    min-width: inherit;
-    padding: 0px;
-  }
-  #site_header h1 {
-    padding: 10px;
-    float: none;
-  }
-  #site_header h1 img {
-    margin: 0px auto;
-  }
-  #site_header nav {
-    margin-top: 0px;
-    float: none;
-  }
-  #site_header nav ul li {
-    width: 50%;
-    font-size: 12px;
-  }
-  #site_header nav ul li a {
-    width: auto;
-  }
-}
+
 /* ---------------------------------------------
 site common format
 --------------------------------------------- */
