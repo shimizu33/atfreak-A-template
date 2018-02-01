@@ -26,7 +26,7 @@
 <ul>
 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">採用TOP</a></li>
 <li><a href="http://www.tokangroup.co.jp/" target="_blank">CORPORATE</a></li>
-<li><a href="http://www.tokangroup.co.jp/" target="_blank">一覧</a></li>
+<li><a href="<?php echo get_category  ?>" target="_blank">募集職種一覧</a></li>
 </ul>
 </nav>
 </header>

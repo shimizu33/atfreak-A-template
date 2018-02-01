@@ -19,7 +19,7 @@ header format
 header {
   overflow: hidden;
   height: 70px;
-  padding-top: 25px;
+  padding:25px 20px 0;
 }
 header h1 {
   float: left;
@@ -69,7 +69,7 @@ footer format
     overflow: hidden;
   }
   #site_footer .inner nav {
-    float: left;
+    text-align: center;
   }
   #site_footer .inner nav ul {
     margin: 10px 0px;
@@ -78,7 +78,7 @@ footer format
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.4;
-    color: #66cc66;
+    color: #000;
     display: inline-block;
   }
   #site_footer .inner nav ul li::after {
@@ -87,6 +87,7 @@ footer format
   }
   #site_footer .inner nav ul li a {
     text-decoration: none;
+    color: #000;
   }
   #site_footer .inner nav ul li:first-child::before {
     content: '｜';
