@@ -14,24 +14,14 @@ get_header();
 </div>
 </div></div>
 
-
-
-<?php if (has_post_thumbnail()): ?>
 <?php
-$image_id = get_post_thumbnail_id();
-$image_url = wp_get_attachment_image_src($image_id, true);
+$main_photo = wp_get_attachment_image_src(get_field('main_photo1'), 'large');
 ?>
-<div id="main_catch" style="background-image: url(<?php echo $image_url[0]; ?>)">
-<?php else: ?>
-<div id="main_catch">
-<?php endif; ?>
+<div id="main_catch" style="background-image: url(<?php echo $main_photo[0]; ?>)">
 <p>
 <img src="<?php echo get_template_directory_uri(); ?>/img/main_catch.png" width="552" height="130" alt="女性がイキイキ&キラキラと働ける職場ですよ">
 </p>
 </div>
-
-
-
 <article id="recruit_page">
 
 <a href="#form" class="btn_form_anchor">ご応募はこちらから</a>

@@ -1,7 +1,7 @@
 <?php
   $args = array(
     'post_type' => 'post',
-    'posts_per_page' => 5,
+    'posts_per_page' => 10,
   );
   $q = new WP_Query( $args );
 ?>
@@ -23,7 +23,7 @@
 $text = mb_substr(get_field('requirements_required4'),0,12,'utf-8');
 $text_length = mb_strlen($text);
 if ($text_length === 12) {
-$omission = '...';
+  $omission = '...';
 }
 echo $text . $omission;
 $omission = '';
@@ -38,5 +38,5 @@ $omission = '';
 </div>
 <?php endwhile; ?>
 <?php else: ?>
-<p><?php echo '記事はありません。'; ?></p>
+  <p><?php echo '記事はありません。'; ?></p>
 <?php endif; ?>
