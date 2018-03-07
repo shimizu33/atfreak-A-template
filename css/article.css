@@ -229,7 +229,7 @@ site common format
     text-align: center;
   }
   main article .common_title span {
-    border-bottom: #66cc66 solid 2px;
+    border-bottom: #fe7f0a solid 2px;
     padding: 0px 10px 5px;
     display: inline-block;
   }
@@ -329,7 +329,7 @@ recruit page format
 --------------------------------------------- */
 @media print, screen {
   #recruit_title {
-    background-color: #66cc66;
+    background-color: #fe7f0a;
     padding: 20px 0px;
     color: #fff;
   }
@@ -365,7 +365,7 @@ recruit page format
   }
 
   #recruit_page .btn_form_anchor {
-    background-color: #66cc66;
+    background-color: #fe7f0a;
     margin: 60px auto 0px;
     padding: 25px;
     width: 440px;
@@ -465,10 +465,10 @@ recruit page format
   #recruit_page .recruit_data h3 {
     font-size: 26px;
     line-height: 1.4;
-    color: #66cc66;
+    color: #fe7f0a;
   }
   #recruit_page .recruit_data h4 {
-    border-left: #66cc66 solid 6px;
+    border-left: #fe7f0a solid 6px;
     padding-left: 10px;
     margin-top: 50px;
     font-size: 22px;
@@ -523,7 +523,7 @@ recruit page format
     display: block;
   }
   #recruit_page .recruit_data .other_links li a {
-    border: #66cc66 solid 1px;
+    border: #fe7f0a solid 1px;
     text-decoration: none;
     color: #000;
     position: relative;
@@ -532,7 +532,7 @@ recruit page format
     content: '';
     border-style: solid;
     border-width: 0 0 10px 10px;
-    border-color: transparent transparent #66cc66 transparent;
+    border-color: transparent transparent #fe7f0a transparent;
     width: 0;
     height: 0;
     display: block;
@@ -555,7 +555,7 @@ recruit page format
     clear: left;
   }
   #recruit_page .tel_link {
-    background-color: #66cc66;
+    background-color: #fe7f0a;
     margin-top: 30px;
     padding: 15px;
     font-size: 24px;
@@ -906,9 +906,6 @@ footer format
   #site_footer .inner {
     overflow: hidden;
   }
-  #site_footer .inner nav {
-    float: left;
-  }
   #site_footer .inner nav ul {
     margin: 10px 0px;
   }
@@ -916,7 +913,7 @@ footer format
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.4;
-    color: #66cc66;
+    color: #fe7f0a;
     display: inline-block;
   }
   #site_footer .inner nav ul li::after {
@@ -989,4 +986,10 @@ MW WP Form initialization
 .horizontal-item {
 	margin-left: 0px !important;
 }
+
+/* ---------------------------------------------
+記事一覧
+--------------------------------------------- */
+
+
 
